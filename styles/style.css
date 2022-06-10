@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700&family=Neucha&family=PT+Sans+Narrow:wght@400;700&family=Roboto+Mono:wght@100;400;700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Crete+Round:ital@0;1&family=Fjalla+One&family=Fredoka+One&family=Paytone+One&display=swap");
+
+/*
+
+font-family: 'Karla', sans-serif;
+font-family: 'Neucha', cursive;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+  font-family: 'Crete Round', serif;
+    font-family: 'Fredoka One', cursive;
+
+    font-family: 'Paytone One', sans-serif
+
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.navwrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05082cf1;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.navwrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+.navwrapper ul li {
+  margin: 5em 0;
+}
+.navwrapper ul li a {
+  color: white;
+  position: relative;
+  font-size: 3rem;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#active:checked ~ .navwrapper {
+  clip-path: circle(100%);
+}
+.menu-button {
+  position: fixed;
+  right: 0.5em;
+  top: 0.5em;
+  z-index: 3;
+  text-align: center;
+  line-height: 2.6em;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #4852bb;
+  color: rgb(255, 255, 255);
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-60%, -50%);
+}
+
+.hero-text p {
+  font-family: "Paytone One", sans-serif;
+  font-size: 3rem;
+
+  color: rgb(41, 41, 41);
+}
+.hero-text span {
+  font-family: "Roboto Mono";
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: -0.1em;
+}
+
+.socials a {
+  color: #4852bb;
+  padding-right: 0.5em;
+}
+
+.arrow-container {
+  position: fixed;
+  display: flex;
+
+  background-color: #4852bb;
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+  top: 50%;
+  left: 73%;
+  transform: translate(-27%, -50%);
+}
+.arrow-container i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5vw;
+  transform: translate(-50%, -50%);
+}
+.arrow-container a {
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+}
+
+.about-me {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  left: 0;
+  background-color: #1b2e7c;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-me-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 3em 0 3em;
+}
+
+.about-me h1 {
+  font-family: "Fredoka One", cursive;
+  color: white;
+  text-transform: uppercase;
+  padding: 2em;
+}
+.about-me-wrapper .socials a {
+  color: #e7e7e7;
+}
+
+.about-description p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: white;
+  padding: 2em;
+}
+
+.about-description a {
+  color: rgb(64, 105, 226);
+  font-weight: 600;
+  background-color: white;
+  border-radius: 1em;
+  padding: 0.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.projects {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  right: 0;
+  background-color: #c7c7c7;
+}
+
+.card-wrapper {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin: 5em;
+}
+.card-container {
+  text-align: center;
+  position: relative;
+  background-color: #181818ea;
+  border-radius: 1em;
+}
+.card-image {
+  object-fit: contain;
+  margin: 1em;
+}
+.card-image img {
+  max-width: 250px;
+  max-height: 100px;
+  height: auto;
+}
+
+.card-title {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+}
+.description {
+  padding: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 0.8em;
+}
+.card-btn {
+  display: grid;
+  font-family: "Roboto Mono", monospace;
+  text-decoration: none;
+  height: auto;
+  font-size: 1em;
+  padding: 1em;
+  color: #ff1764;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  background-color: #212121;
+}
+
+@media screen and (max-width: 1200px) {
+  .arrow-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-me {
+    position: initial;
+    background-color: #242424;
+    width: 100%;
+    height: auto;
+  }
+  .about-me-wrapper {
+    transform: none;
+    padding: 10em 5em 10em 5em;
+  }
+  .hero-text p {
+    font-size: 2rem;
+  }
+
+  .hero-text span {
+    font-size: 2rem;
+  }
+  .projects {
+    position: initial;
+    width: 100%;
+    background-color: #c7c7c7;
+    height: 100%;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    position: initial;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-wrapper {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+
+  .arrow-container {
+    width: 100px;
+    height: 100px;
+  }
+  .hero-text p {
+    font-size: 1.5rem;
+  }
+
+  .hero-text span {
+    font-size: 1.5rem;
+  }
+
+  .navwrapper ul li a {
+    font-size: 1.5rem;
+  }
+}
